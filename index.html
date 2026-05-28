@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>青葵 · 个人博客</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- 光标光晕 -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- 顶部导航 -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">青葵</a>
+      <div class="nav-links">
+        <a href="#posts">文章</a>
+        <a href="#showcase">交互</a>
+        <a href="#about">关于</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+          <span class="toggle-icon" id="toggleIcon">&#9790;</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-shell">
+    <!-- 英雄区 -->
+    <header class="hero">
+      <div class="hero-badge" id="heroBadge">
+        <span class="badge-dot"></span>
+        <span id="badgeText">探索</span>
+      </div>
+      <h1>你好，我是<span class="gradient-text">青葵</span></h1>
+      <p class="hero-sub">写生活、设计与代码的简约故事。<br />每一段文字，都希望与你的当下相遇。</p>
+      <div class="action-row">
+        <button class="pulse-btn magnetic" id="discoverBtn">
+          <span class="btn-text">发现我的故事</span>
+          <span class="btn-particle-container" id="particleContainer"></span>
+        </button>
+        <button class="ghost-btn magnetic" id="scrollBtn">
+          浏览文章
+          <span class="arrow-down">↓</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 文章卡片区 -->
+    <main>
+      <section id="posts">
+        <div class="section-header reveal">
+          <span class="section-tag">文章</span>
+          <h2>近期文字</h2>
+        </div>
+        <div class="card-grid">
+          <article class="post-card reveal" data-delay="0">
+            <div class="card-badge new">最新</div>
+            <div class="card-icon">&#9678;</div>
+            <h3>一页设计的力量</h3>
+            <p>从页面结构到交互细节，用极简思维激活诗意空间。</p>
+            <div class="card-meta">
+              <span>2026.05.20</span>
+              <span>·</span>
+              <span>6 分钟</span>
+            </div>
+            <button class="link-btn" data-post="design">阅读文章 →</button>
+          </article>
+          <article class="post-card reveal" data-delay="100">
+            <div class="card-badge essay">随笔</div>
+            <div class="card-icon">&#9632;</div>
+            <h3>城市里的慢日子</h3>
+            <p>在繁忙里寻找柔软角落，记录那些不经意的温柔时刻。</p>
+            <div class="card-meta">
+              <span>2026.05.15</span>
+              <span>·</span>
+              <span>4 分钟</span>
+            </div>
+            <button class="link-btn" data-post="city">阅读文章 →</button>
+          </article>
+          <article class="post-card reveal" data-delay="200">
+            <div class="card-badge code">代码</div>
+            <div class="card-icon">&#9650;</div>
+            <h3>让功能成为惊喜</h3>
+            <p>按钮不仅是点击，更是情绪与体验的桥梁。</p>
+            <div class="card-meta">
+              <span>2026.05.10</span>
+              <span>·</span>
+              <span>8 分钟</span>
+            </div>
+            <button class="link-btn" data-post="code">阅读文章 →</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- 新颖按钮交互展示 -->
+      <section id="showcase" class="feature-panel reveal">
+        <div class="feature-text">
+          <span class="section-tag">交互</span>
+          <h3>新颖按钮实验</h3>
+          <p>每个按钮都是一次微交互的探索——磁力跟随、波纹扩散、粒子迸发，让点击本身成为一种享受。</p>
+        </div>
+        <div class="button-showcase">
+          <button class="neo-btn magnetic">磁力悬浮</button>
+          <button class="neo-btn ripple-demo" id="rippleDemo">波纹扩散</button>
+          <button class="neo-btn burst-demo" id="burstDemo">粒子迸发</button>
+          <button class="neo-btn glow-demo" id="glowDemo">光晕按钮</button>
+        </div>
+      </section>
+
+      <!-- 关于区 -->
+      <section id="about" class="about-panel reveal">
+        <span class="section-tag">关于</span>
+        <h3>关于这个博客</h3>
+        <p>这里记录着设计与代码的交汇点。我相信好的交互不需要复杂的说明——一个按钮的反馈、一段文字的节奏、一个页面的呼吸感，都在无声地讲述故事。简约不是简单，而是精准。</p>
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat-num" data-count="42">0</span>
+            <span class="stat-label">篇文章</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="12">0</span>
+            <span class="stat-label">个项目</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-label">年写作</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer reveal">
+      <p>© 2026 青葵 · 用心书写每一行</p>
+      <div class="footer-links">
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+        <a href="#">RSS</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 文章弹窗 -->
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <button class="close-btn magnetic" id="closeModal">&#10005;</button>
+      <div class="modal-badge" id="modalBadge"></div>
+      <h2 id="modalTitle">文章标题</h2>
+      <p id="modalText">内容正在加载，请稍候。</p>
+    </div>
+  </div>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backTop" aria-label="回到顶部">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
